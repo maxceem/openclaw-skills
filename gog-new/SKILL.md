@@ -7,7 +7,8 @@ metadata:
     "openclaw":
       {
         "emoji": "🎮",
-        "requires": { "bins": ["gog"] },
+        "requires": { "bins": ["gog"], "env": ["GOG_KEYRING_PASSWORD"] },
+        "primaryEnv": "GOG_KEYRING_PASSWORD",
         "install":
           [
             {
