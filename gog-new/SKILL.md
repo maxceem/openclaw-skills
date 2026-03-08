@@ -1,6 +1,6 @@
 ---
-name: gog
-description: Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.
+name: gog-new
+description: Google Workspace CLI for Gmail, Calendar, Tasks, Drive, Contacts, Sheets, and Docs.
 homepage: https://gogcli.sh
 metadata:
   {
@@ -22,14 +22,14 @@ metadata:
   }
 ---
 
-# gog
+# gog-new
 
-Use `gog` for Gmail/Calendar/Drive/Contacts/Sheets/Docs. Requires OAuth setup.
+Use `gog` for Gmail/Calendar/Tasks/Drive/Contacts/Sheets/Docs. Requires OAuth setup.
 
 Setup (once)
 
 - `gog auth credentials /path/to/client_secret.json`
-- `gog auth add you@gmail.com --services gmail,calendar,drive,contacts,docs,sheets`
+- `gog auth add you@gmail.com --services gmail,calendar,tasks,drive,contacts,docs,sheets`
 - `gog auth list`
 
 Common commands
@@ -48,6 +48,13 @@ Common commands
 - Calendar create with color: `gog calendar create <calendarId> --summary "Title" --from <iso> --to <iso> --event-color 7`
 - Calendar update event: `gog calendar update <calendarId> <eventId> --summary "New Title" --event-color 4`
 - Calendar show colors: `gog calendar colors`
+- Task lists: `gog tasks lists --max 50`
+- Task list create: `gog tasks lists create <title>`
+- Tasks in list: `gog tasks list <tasklistId> --max 50`
+- Task add: `gog tasks add <tasklistId> --title "Task title"`
+- Task add recurring: `gog tasks add <tasklistId> --title "Daily standup" --due 2025-02-01 --repeat daily --repeat-until 2025-02-05`
+- Task done: `gog tasks done <tasklistId> <taskId>`
+- Task undo/delete: `gog tasks undo <tasklistId> <taskId>` / `gog tasks delete <tasklistId> <taskId>`
 - Drive search: `gog drive search "query" --max 10`
 - Contacts: `gog contacts list --max 20`
 - Sheets get: `gog sheets get <sheetId> "Tab!A1:D10" --json`
@@ -110,6 +117,7 @@ Notes
 
 - Set `GOG_ACCOUNT=you@gmail.com` to avoid repeating `--account`.
 - For scripting, prefer `--json` plus `--no-input`.
+- Today's Google Tasks: list the target task list and filter by today's `YYYY-MM-DD` due date; recurring tasks are already returned as dated instances.
 - Sheets values can be passed via `--values-json` (recommended) or as inline rows.
 - Docs supports export/cat/copy. In-place edits require a Docs API client (not in gog).
 - Confirm before sending mail or creating events.
