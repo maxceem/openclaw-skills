@@ -1,5 +1,5 @@
 ---
-name: gog-new
+name: gog
 description: Google Workspace CLI for Gmail, Calendar, Tasks, Drive, Contacts, Sheets, and Docs.
 homepage: https://gogcli.sh
 metadata:
@@ -23,7 +23,7 @@ metadata:
   }
 ---
 
-# gog-new
+# gog
 
 Use `gog` for Gmail/Calendar/Tasks/Drive/Contacts/Sheets/Docs. Requires OAuth setup.
 
