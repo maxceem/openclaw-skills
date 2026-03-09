@@ -22,3 +22,7 @@ Improved standard `notion` skill.
 
 - Support of `SecretRef` via `NOTION_SECRET`.
 - Added comments guidance.
+
+## License
+
+[MIT](./LICENSE)
