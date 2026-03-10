@@ -23,6 +23,13 @@ Improved standard `notion` skill.
 - Support of `SecretRef` via `NOTION_SECRET`.
 - Added comments guidance.
 
+## tavily
+
+Improved [https://clawhub.ai/arun-8687/tavily-search](tavily-search) from clawhub.
+
+- Fixed metadata namespace from `clawbot` to `openclaw` otherwise `SecretRef` doesn't work.
+- Renamed folder to `tavily` to match skill `name`.
+
 ## License
 
 [MIT](./LICENSE)
