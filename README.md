@@ -25,11 +25,11 @@ Improved standard `notion` skill.
 
 ## tavily
 
-Improved [https://clawhub.ai/arun-8687/tavily-search](tavily-search) from clawhub.
+Improved [https://clawhub.ai/arun-8687/tavily-search](https://clawhub.ai/arun-8687/tavily-search) - now removed for clawhub.
 
 - Fixed metadata namespace from `clawbot` to `openclaw` otherwise `SecretRef` doesn't work.
 - Renamed folder to `tavily` to match skill `name`.
 
 ## License
 
-[MIT](./LICENSE)
+MIT
