@@ -1,6 +1,6 @@
 ---
 name: yt-dlp-downloader
-description: Download videos from YouTube, Bilibili, Twitter, and thousands of other sites using yt-dlp. Use when the user provides a video URL and wants to download it, extract audio (MP3), download subtitles, or select video quality. Triggers on phrases like "下载视频", "download video", "yt-dlp", "YouTube", "B站", "抖音", "提取音频", "extract audio".
+description: Download videos from YouTube, Instagram, X/Twitter, Vimeo, Twitch, and thousands of other sites using yt-dlp. Use when the user provides a video URL and wants to download it, extract audio (MP3), download subtitles, or select video quality. Triggers on phrases like "download video", "save video", "yt-dlp", "YouTube", "Instagram", "TikTok", "extract audio", "download MP3".
 ---
 
 # yt-dlp Video Downloader
@@ -140,7 +140,7 @@ When user provides a video URL:
 
 ## Example Interaction
 
-User: "帮我下载这个视频 https://www.youtube.com/watch?v=xxx"
+User: "Download this video https://www.youtube.com/watch?v=xxx"
 
 Response:
 ```bash
@@ -148,15 +148,15 @@ Response:
 yt-dlp -P "~/Downloads/yt-dlp" --cookies-from-browser chrome "https://www.youtube.com/watch?v=xxx"
 ```
 
-User: "下载这个视频的音频 https://www.bilibili.com/video/xxx"
+User: "Extract the audio from this video https://vimeo.com/xxx"
 
 Response:
 ```bash
-# Bilibili - extracting audio as MP3
-yt-dlp -P "~/Downloads/yt-dlp" -x --audio-format mp3 "https://www.bilibili.com/video/xxx"
+# Vimeo - extracting audio as MP3
+yt-dlp -P "~/Downloads/yt-dlp" -x --audio-format mp3 "https://vimeo.com/xxx"
 ```
 
-User: "下载这个 Twitter 视频 https://twitter.com/xxx/status/123"
+User: "Download this X/Twitter video https://twitter.com/xxx/status/123"
 
 Response:
 ```bash
@@ -168,11 +168,14 @@ yt-dlp -P "~/Downloads/yt-dlp" "https://twitter.com/xxx/status/123"
 
 yt-dlp supports thousands of sites including:
 - YouTube, YouTube Music
-- Bilibili (B站)
-- Twitter/X
-- TikTok, Douyin (抖音)
+- Instagram
+- X/Twitter
+- TikTok
 - Vimeo
 - Twitch
+- Facebook
+- Reddit
+- SoundCloud
 - And many more...
 
 Full list: https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md
